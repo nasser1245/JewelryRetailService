@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#new_comment{ width:550px; overflow:hidden; border:#096 dotted 1px; padding-right:0px;}
+#new_comment h1{ width:500px; padding:10px; font-size:12px;}
+#new_comment textarea{ width:430px; line-height:25px; color:#060;}
+.btn {width:60px; height:30px}
+#new_comment #cc{
+	width:100px;
+	height:40px;
+	font-size:20px;
+	font-weight:bold;
+	text-align:left;
+	direction:ltr;
+	letter-spacing:11px;
+}
+#new_comment b{
+	font-weight:bold;
+	font-size:30px;
+	font-family:"Times New Roman", Times, serif;
+	color:#960;
+	padding-left:10px;
+}
+
+.ShName{
+	width:600px;
+	height:25px;
+	font-size:10px;
+	color:#00F;
+	text-align:right;
+	background:#D8E7FC;
+	border:#D8E7FC 1px solid;
+	border-radius:5px;
+}
+.ShName .ShDate{
+	text-align:left;
+	color:#000;
+	letter-spacing:1px;
+	margin-top:-25px;
+}
+.ShQ{
+	width:590px;
+	line-height:25px;
+	font-size:11px;
+	color:#000;
+	text-align:justify;
+	margin:-25px auto 10px auto;
+}
+.ShAnswer{
+	font-size:10px;
+	color:#030;
+	margin:10px;
+}
+.ShA{
+	background:#FF9;
+	color:#000;
+	font-size:12px;
+	width:590px;
+	margin:-20px auto 50px auto;
+	text-align:justify;
+	border:#990 1px solid;
+	border-radius:5px;
+	padding:2px 10px 10px 10px;
+	display:none;
+}
+.qan{
+	position:absolute;
+	margin-top:-75px;
+}
+.QP{margin-top: 30px;}
+.QandP{width:650px; float:right; }
+.QandP{width:100%; float:right; }
+#satr{padding: 15px 5px 25px 5px}
+#lblname{padding:5px; float:right; width:30px; text-align:right}
+#val{width:200px; float:right}
+#lblmail{float:right; width:40px; margin-right:10px; text-align:right}
+#lblostan{padding:5px; float:right; width:40px}
+#divcaptcha {margin-right:10px; margin-top:10px; padding:5px; padding-top:10px; text-align:center; float:right}
+#imgcaptcha {text-align: center; width:140px; height:50px; border-color:Maroon; border-style:solid; border-width:1px}
+#valuecaptcha {padding:5px; margin-top:15px; width:110px; text-align:right; float:right; }
+.txtboxCaptcha{letter-spacing: 9px; text-align:center; direction:rtl; font-size:20px; width:110px; height:46px}
+#jahat {padding:5px; margin-top:30px; width:20px; text-align:right; color:Maroon; font-weight:bold; float:right;}
+#btn {padding:5px; margin-top:25px; margin-right:60px; width:80px; float:right;}
+
+
+.rowsrpt {width:636px; border:1px dotted #666; float:right; height:30px; line-height:30px; text-align: right;}
+.contentFAQ{width:580px; float:right; min-height:20px; border-radius:5px;  margin:20px 45px 20px 5px; background-color:#DBFFC7; text-align:justify; min-height:30px; padding:7px 7px 1px 7px}
+.contentTop {border: 1px solid #979797; width: 491px; border-radius:5px; float: right; min-height: 20px; margin: -19px -19px 0px 0px; background-color:#E5FFE2; position:absolute}
+.contentTopRight {width: 391px; float:right}
+.NameFAQ {min-width: 20px;
+max-width: 130px;
+max-height: 20px;
+float: right;
+margin: 0px 3px 0px 1px;
+overflow: hidden;}
+.FromFAQ{min-width:20px; text-align:center; float:right; margin:0px 1px 0px 1px}
+.ProFAQ {min-width:20px; float:right; margin:0px 1px 0px 1px; max-width: 105px;overflow: hidden;max-height: 20px;}
+.slashFAQ {min-width:5px; float:right; margin:0px 1px 0px 1px}
+.cityFAQ {min-width: 50px;
+float: right;
+margin: 0px 1px 0px 1px;
+max-width: 104px;
+overflow: hidden;
+max-height: 20px;}
+
+.contentTopLeft {width: 91px; float:right; text-align:left}
+.dateFAQ {width:60px; float:right; margin:0px 29px 0px 1px}
+
+.askFAQ {width:100%; padding-top:10px}
+.ansFAQ {width:520px; float:right; min-height:20px; border-radius:5px;  margin:15px 53px 1px 0px; padding:5px; background-color:#CAFF99; text-align:justify;}

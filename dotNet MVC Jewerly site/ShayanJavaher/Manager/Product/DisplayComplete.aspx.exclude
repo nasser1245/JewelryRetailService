@@ -1,0 +1,72 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/ManagerMasterPage.master" AutoEventWireup="true" CodeFile="DisplayComplete.aspx.cs" Inherits="Manager_Product_DisplayComplete" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadsCPH" Runat="Server">
+
+   
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BodyCPH" Runat="Server">
+<div id="main">
+        <div id="main_box">
+            
+            <div style="width: 100%; height: 300px; text-align: center">
+                <div style="border: #666 1px dotted; float: right; width: 33%; padding: 5px 5px 5px 5px;
+                    margin: 5px 5px 5px 5px; text-align: justify; line-height: 20px; font-size: 11px;">
+                    <div class="" style="width: 240px"><span style="font-weight:bold">نام محصول : </span><%=Product.Name.ToString()%></div>
+                    <div class="" style="width: 240px"><span style="font-weight:bold">نوع محصول : </span><%=Product.ProductType.type.ToString()%></div>
+                    <div class="" style="width: 240px"><span style="font-weight:bold">توضیح کوتاه : </span><%=Product.Desp.ToString()%></div>
+                    <div class="" style="width: 240px;"><span style="font-weight:bold">کد جواهر : </span><%=Product.ID.ToString()%></div>
+                    <div class="" style="width: 240px;">
+                        <div class="" style=" width: 100%">
+                            <div style="color: Red; font-weight: bold"><span style="color:Black; font-weight:bold">قیمت : </span><%=Product.Price.ToString()%><span style="color:Black; font-weight:normal">&nbspتومان&nbsp</span></div>
+                        </div>
+                        </div>
+                    <div class="" style="width: 240px; text-align: center">
+                        <div style="text-align:right"><span style="font-weight:bold">سایزبندی : </span><% if (Product.Size == true){ %><span >دارد</span><% } %></div>
+                        </div>
+                    <div class="" style="width: 240px; text-align: center">
+                        <div style="text-align:right"><span style="font-weight:bold">لوکس : </span>
+                        <% if (Product.Luxe == true){ %><span>هست</span><% } %><%else %><span>نیست</span></div>
+                        </div>
+                </div>
+
+<%----------------------------------- اسلایدر عکس ها ------------------%>
+
+                <div style="border: #666 1px dotted; width: 60%; height: 280px; float: right; padding: 5px 5px 5px 5px; margin: 5px 5px 5px 5px">
+                    <asp:Datalist ID="DatalistDisplayPics" runat="server" GridLines="Horizontal" RepeatColumns="5" >
+                        <ItemTemplate>
+                            <div>
+                                 <img alt="" style="height:80px; Width:114px; margin:0px; padding:1px; border:#000 1px solid; cursor:pointer;" ID="Image1" runat="server"  src='<%# "../../Resource/ProductOtherPic/"+Eval("Pic") %>' />
+                            </div>
+                        </ItemTemplate>
+                    </asp:Datalist>
+                </div>
+            </div>
+
+
+<%----------------------------------- توضیح کامل ------------------%>
+            <div style="width: 95%; float: right; padding: 5px 5px 5px 5px; margin: 5px 5px 5px 5px">
+                <span style="font-weight:bold">توضیح کامل : </span><%=Product.AboutProduct.ToString()%>
+                </div>
+
+
+<%----------------------------------- عکس اصلی ------------------%>
+            <div style="width: 100%; height: 300px; text-align: center">
+                <div style="border: #666 1px dotted; float: right; width: 200px; height: 260px; padding: 5px 5px 5px 5px; margin: 5px 5px 5px 5px; text-align:right; line-height: 20px; font-size: 11px;">
+                    <div><span style="vertical-align:top; font-weight:bold">عکس اصلی : </span>
+                        <img src='<%= Page.ResolveUrl("~/Resource/ProductPic/"+Product.MainPic.ToString())%>' class="" width="200px" height="240px" title="<%=Product.Name.ToString()%>" alt="<%=Product.Name.ToString()%>" border="0" id="Img3" />
+                    </div>
+                </div>
+
+<%----------------------------------- نمایش ویدئو ------------------%>
+                <div style="border: #666 1px dotted; width: 43%; height: 280px; float: right; padding: 5px 5px 5px 5px;
+                    margin: 5px 190px 5px 5px;">
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+</div>
+</asp:Content>
+

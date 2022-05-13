@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using HProtest_BLL;
+using HProtest_BLL.Manager;
+using HProtest_BLL.Member;
+
+using JQControls;
+
+public partial class HomePage_ViewSelectedPoduct : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+    }
+}

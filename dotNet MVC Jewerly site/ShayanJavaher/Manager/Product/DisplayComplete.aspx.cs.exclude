@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using HProtest_BLL;
+using HProtest_BLL.Manager;
+using HProtest_BLL.Member;
+using HProtest_BLL.ClassView;
+using System.Data;
+using HProtest_BLL.Helper;
+
+public partial class Manager_Product_DisplayComplete : System.Web.UI.Page
+{
+    public Products Product = new Products();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if(Request["pid"]==null)
+            Response.Redirect("ProductList.aspx");
+        string pid = Request["pid"].ToString();
+        if(!Utility.IsNumeric(pid))
+            Response.Redirect("ProductList.aspx");
+        
+        DataTable dt = ManagerData.GetProductInfo(pid);
+        //Common.UpdateVisited(int.Parse(pid));
+        if (dt != null)
+        {
+
+            Product.ID = int.Parse(pid);
+            Product.Name = dt.Rows[0]["Name"].ToString();
+            Product.Video = dt.Rows[0]["Video"].ToString();
+            Product.Desp = dt.Rows[0]["Desp"].ToString();
+            Product.Visited = int.Parse(dt.Rows[0]["Visited"].ToString());
+            Product.InserDate = Convert.ToDateTime(dt.Rows[0]["InsertDate"]);
+            Product.Count = dt.Rows[0]["Count"].ToString();
+            Product.Point = dt.Rows[0]["Point"].ToString();
+            Product.Luxe = Convert.ToBoolean(dt.Rows[0]["Luxe"]);
+            Product.AboutProduct = dt.Rows[0]["AboutProduct"].ToString();
+            Product.Size = Convert.ToBoolean(dt.Rows[0]["Size"].ToString());
+            Product.MainPic = dt.Rows[0]["MainPic"].ToString();
+            Product.Price = int.Parse(dt.Rows[0]["Price"].ToString());
+            Product.ProductType.ID = int.Parse(dt.Rows[0]["ProductTypeID"].ToString());
+            Product.ProductType.type = dt.Rows[0]["Type"].ToString();
+            DatalistDisplayPics.DataSource = Common.GetPics(pid);
+            DatalistDisplayPics.DataBind();
+            
+        }else
+        {
+            Response.Redirect("ProductList.aspx");
+        }
+
+        
+    }
+}

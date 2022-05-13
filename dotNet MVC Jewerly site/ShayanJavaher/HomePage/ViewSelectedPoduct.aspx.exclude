@@ -1,0 +1,35 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewSelectedPoduct.aspx.cs" Inherits="HomePage_ViewSelectedPoduct" %>
+
+<%@ Register src="UC/ViewSelectedPoduct.ascx" tagname="ViewSelectedPoduct" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    
+<link href="../../Manager/Css/CssSubAdmin.css" rel="stylesheet" type="text/css" />
+<link href="../../Manager/Css/css.css" rel="stylesheet" type="text/css" />
+<link href="CSS/main(1).css" rel="stylesheet" type="text/css"/>
+<link href="CSS/main.css" rel="stylesheet" type="text/css"/>
+<link id="livezilla_style" href="CSS/style.css" rel="stylesheet" type="text/css"/>
+
+<%--<script type="text/javascript" async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.H5cHnTelzF0.O/m=plusone/am=AQ/rt=j/d=1/rs=AItRSTOWdlVZkgxjSC08jHKqgbijq0kuIA/cb=gapi.loaded_0" ></script>
+<script type="text/javascript" async="" src="JS/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript" async="" src="JS/ga.js"></script>
+<script type="text/javascript" async="" src="JS/cb=gapi.loaded_0" ></script>
+<script type="text/javascript" language"javascript" async="" src="JS/main.js"></script>
+<script type="text/javascript" src="JS/server.php"></script>
+<script type="text/javascript" src="http://www.javaherbazar.com/livezilla/server.php?request=track&amp;output=jcrpt&amp;nse=0.3330386483576149"></script>
+<script src="JS/top_div.js" language"javascript" type="text/javascript"></script>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+    <uc1:ViewSelectedPoduct ID="ViewSelectedPoduct1" runat="server" />
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿#littleBasket {padding:5px; width:230px; min-height:50px; position:fixed; top:185px; text-align:center; overflow:visible; margin-right:530px;}
+#divbtn{width: 80px; padding-top: 0px; height: 25px; margin: -15px -11px -10px auto; position: absolute; font-size: 10px;}
+#header{padding:5px; height:13px; line-height:10px; width:260px; color:White; font-weight:bold; background-color:#666}
+#titr{background-color:Menu; height:15px; line-height:5px; padding:5px; vertical-align:top; text-align:center; width:260px;}
+#titrfeilds{padding:5px; float:right; font-size:11px}
+#delfeilds{padding: 5px; font-size:11px}
+#satr_even {padding:5px; text-align:center; height:50px; width:260px; background-color:Scrollbar}
+#satr_odd{padding:5px; text-align:center; height:50px; width:260px; background-color:Menu}
+#btnendbuy{padding:5px; height:20px; width:260px; color:White; font-weight:bold; background-color:#666}

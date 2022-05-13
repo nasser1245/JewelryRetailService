@@ -1,0 +1,26 @@
+﻿
+/*-------------------------------------------- Login  ---------------------------------------------------------------*/
+
+.LoginUser{height:250px;text-align:right;padding:5px 0 10px 0;margin:0 auto;width:300px;font:9pt Tahoma;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;}
+.Registers{}
+.LoginUser div.LableOdd,.LoginUser div.ValueOdd,.LoginUser div.LableEven,.LoginUser div.ValueEven{height:20px;margin-bottom:5px;float:right;font:9pt/20px Tahoma;}
+.LoginUser input[type=text],.LoginUser input[type=password]{border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;border:1px solid black;height:16px;line-height:16px;text-align:right;}
+.LableOdd{width: 110px;text-align:left;margin-top:5px;}
+.ValueOdd{width:190px;margin-top:5px;}
+.LableEven{width:110px;text-align:left;margin-top:5px;}
+.ValueEven{width:190px;margin-top:5px;}
+.LoginUser input[type=button]{width:80px;height:20px;font:8pt/13px Tahoma;margin-top:5px;}
+.LoginUser #forgot{width:150px;}
+.LoginUser #reset{width:100px;}
+.ValueCaptcha{width:240px;margin-top:5px;height:100px;margin-bottom:5px;float:right;}
+.ValueCaptcha .captClass{margin-bottom:5px;height:14px;width:240px;float:right;}
+.ValueCaptcha #captchaP{height:50px;margin-bottom:5px;width:240px;float:right;}
+#reloadCaptcha{margin:25px 5px 0 0;width:24px;float:right;cursor:hand;cursor:pointer;background:url('PicSite/Reload.gif') no-repeat;}
+#reloadCaptcha:hover{background:url('PicSite/ReloadHover.gif') no-repeat;}
+.ValueCaptcha #captchaP #captchaImg{float:left;width:200px;height:50px;}
+.LableCaptcha{width: 60px;text-align:left;margin-top:5px;height:20px;margin-bottom:5px;float:right;font:9pt/20px Tahoma;}
+
+.captcha{width:145px;height:50px;text-align:center;border:solid 1px #000;margin:0 auto;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px}
+.captcha>span{font-size:8pt}
+.captcha .value{line-height:30px;display:block;font-size:10pt}
+

@@ -1,0 +1,448 @@
+
+/*@font-face {
+font-family: 'BNazanin';
+src: url('../Font/nazanin.eot');
+src: url('../Font/nazanin.eot?#iefix') format('embedded-opentype'),
+url('../Font/nazanin.woff') format('woff'),
+url('../Font/nazanin.ttf') format('truetype'),
+url('../Font/nazanin.svg#nazanin') format('svg');
+font-weight: normal;
+font-style: normal;
+}*/
+	
+/*---------------------------------General ------------------------------*/	
+.HeaderSite {color:#003008; border-radius:5px; font-weight:bold;}	
+body{font-family:Tahoma; font-size:11px; direction:rtl; padding:0px; margin:0px; color:#000; line-height:20px;}
+
+h1{font-size:14px;  width:634px; padding:7px; margin:0px 17px 10px 5px;}
+        
+a , a:active , a:link , a:visited{text-decoration:none; color:#06C; padding-bottom:2px; cursor:pointer;}
+a:hover{color:#C06;border:none;}
+a:hover img{border:none;}
+
+hr{width:95%; margin:15px auto 10px auto; color:#CCC; size:1px; text-shadow:none;}
+
+select{font-family:Tahoma; direction:rtl; text-align:right; font-size: 11px; height: 25px; width: 110px; color: #336; border: #999 1px solid; border-radius: 2px; margin-bottom:5px}
+
+input{color:#336;}
+input[type="text"],input[type="password"]{font-family:Tahoma; padding:2px; direction:rtl; min-height:20px; line-height:30px; border-radius:3px; -webkit-border-radius:3px;-moz-border-radius:3px;border:#999 1px solid;line-height:16px;text-align:right}
+input[type="submit"] , input[type="button"] , input[type="reset"]{cursor:pointer;padding:5px 10px 5px 10px;font-family:Tahoma}
+
+textarea{font-size:11px; text-align:justify; direction:rtl; line-height:20px; padding:2px; border:#999 1px solid; min-width:200px; height:100px; resize: none;}
+
+.bordermenus {border-bottom:1px solid #D3AB85; border-left: 1px solid #D3AB85; border-right:1px solid #D3AB85}
+.titlemenus {width:100%; height:30px; line-height:30px ;color:White;}
+.exampleRound	{border:1px solid red;}
+#ex3{ border-radius:8px 8px 0px 0px; }
+.gradient { background: rgb(21, 156, 15);
+            background: -moz-linear-gradient(90deg, #c7f9c4 0%, #159c0f 100%);
+            background: -webkit-linear-gradient(90deg,#159c0f  0%, #c7f9c4 100%);
+            background: -o-linear-gradient(90deg, #c7f9c4 0%, #159c0f 100%);
+            background: -ms-linear-gradient(90deg, #c7f9c4 0%, #159c0f 100%);
+            background: linear-gradient(180deg, #c7f9c4 0%, #159c0f 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c7f9c4,endColorstr=#159c0f);}
+
+.BoxDivShadow {border-radius: 5px;
+               box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -webkit-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -moz-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);    }
+               
+.BoxDivShadowIn {box-shadow: inset 1px 1px 5px 1px rgba(221,221,221,1);
+-webkit-box-shadow: inset 1px 1px 5px 1px rgba(221,221,221,1);
+-moz-box-shadow: inset 1px 1px 5px 1px rgba(221,221,221,1);}
+
+.BDP {background: rgb(21, 156, 15);
+             background: -moz-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: -webkit-linear-gradient(90deg,#E6FFCC  0%, white 100%);
+             background: -o-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: -ms-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: linear-gradient(180deg, white 0%, #E6FFCC 100%);
+             filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=white,endColorstr=#E6FFCC);}
+/*-------------------------view selected product-------------------------*/
+
+#star{direction:ltr;width:100px;height:25px;float:left;}
+.main_box{overflow:hidden; width:650px; margin:5px 0px 5px 0px; border:#CCC 1px solid; border-radius:5px; -webkit-border-radius: 5px;-moz-border-radius: 5px; padding:5px 0px 5px 7px; background:#FFF; text-align:center}
+.main_box .rows1_2 {width: 100%; height: 300px; float:right; text-align: center}
+.main_box .rows1_2 .box_desp_CPB {float: right; width: 33%; padding: 5px 5px 5px 5px; margin: 5px 10px 5px 5px; text-align: justify; line-height: 20px; font-size: 11px;}
+.main_box .rows1_2 .box_desp_CPB .desp {width: 200px;float:right; line-height:25px; margin-bottom: 20px;}
+.main_box .rows1_2 .box_desp_CPB .code {width: 240px; float:right; text-align: center}
+.main_box .rows1_2 .box_desp_CPB .price {width: 240px; float:right; text-align: center}
+.main_box .rows1_2 .box_desp_CPB .price .row{width: 100%; float:right}
+.main_box .rows1_2 .box_desp_CPB .buy {width: 240px; text-align: center; float:right;}
+.main_box .rows1_2 .slide {width: 60%; height: 280px; float: right; padding: 5px 5px 5px 5px; margin: 5px 6px 0px 0px}
+.main_box .sizeable {clear:both;width:600px;float:right;margin-top:30px; margin-right:30px}
+.main_box .sizeable .imgfingersize{width:141px; height:131px; padding:0px; margin:-70px 10px -60px auto; background:url(../Resource/PicSite/finger_size.gif) no-repeat top center; position:relative;}
+.main_box .sizeable .content{background:#EAEAEA; padding:10px; border:#999 1px solid; border-radius:5px; color:#903; font-weight:bold; text-align:center; margin:5px;}
+.main_box .sizeable .content .text{float: right; text-align: center; width: 600px;}
+.main_box .sizeable .content .help{text-align: left;}
+.main_box .aboutproduct {text-align:right; padding:5px; width:625px; margin-right:9px; margin-top:20px; margin-bottom:20px}
+.main_box .rows3_4 {width: 100%; height: 300px; text-align: center; float:right}
+.main_box .rows3_4 .mainpic {float: right; width: 50%; height: 300px; padding: 5px 5px 5px 5px; margin: 5px 10px 5px 5px; text-align: justify; line-height: 20px; font-size: 11px;}
+.main_box .rows3_4 .mainpic .content {text-align: center}
+.main_box .rows3_4 .video {border: #666 1px dotted; width: 43%; height: 280px; float: right; padding: 5px 5px 5px 5px; margin: 5px 5px 5px 0px}
+.main_box .rows3_4 .video .videoco {width:100%}
+.main_box .rows3_4 .video .dlvideo {width:100%}
+.main_box .PricBuy {width: 100%; text-align: center; float:right; margin-top: 37px; margin-bottom: 13px;}
+.main_box .PricBuy .price {width: 100%; float:right; text-align: center}
+.main_box .PricBuy .price .row {width: 100%; float:right}
+.main_box .PricBuy .buy {width: 100%; text-align: center; float:right;}
+.main_box .similary {width:100%; float:right; margin-right:3px}
+.main_box .similaryh1 {width: 100%; height: 30px; line-height: 30px; text-shadow: 0px 0px 12px white; margin: 2px 4px 5px 0px; font-size: 13px; font-weight: bold; color: #003800;}
+.main_box .rowssimilary {width: 45%; height: 30px; text-align: right; direction: rtl; float: right; margin-right:10px} 
+.main_box .displayAll {width: 100%; text-align: center; margin-top:10px}
+.main_box .displayAll .row {min-width:200px; text-align: center;padding-top:5px}
+
+ 
+/*---------------------------------MasterPage------------------------------*/
+body{margin:0;background:#a6b6a3 url('../Resource/PicSite/Bg-Master.jpg') repeat-x;}
+.clear{clear:both;}
+.BorderMP{border:1px solid #c5cdb6;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+#MainBodyMP{width:1035px;}
+#TopMP{width:100%;height:185px;float:right;}
+#MainMP{width:100%;background-color:#f4f4f4;float:right;}
+#RightMP{width:171px;height:auto;float:right;background-color:#EEFFD8;margin:2px 2px 3px 0;}
+#ContentMP{width:685px;height:auto;float:right;text-align:center;min-height: 1px;}
+#LeftMP{width:171px;float:right;background-color:#EEFFD8;margin:0 0 5px 0;}
+#FooterMP{width:100%;float:right;height:110px;background:url('../Resource/PicSite/Bg-Footer.jpg') repeat-x;}
+
+#SearchMP{width:100%;height:30px;background-color:#b4c0b0;float:left;}
+#btn_SearchMP{width:20px;height:30px;float:left;line-height:30px;margin: 7px -41px 0px -152px; z-index: 999; position: relative;}
+#txt_SearchMP{width:135px;height:100%;float:left;line-height:30px; margin-left:33px}
+
+#HeaderMP{width:100%;height:155px;background:url('../Resource/PicSite/Header.jpg') no-repeat;float:left;}
+#MenuMP{width:650px;height:35px;margin:120px 180px 0;}
+.MenuTitleMP{width:80px;height:100%;font:600 10px/35px;color:white;direction:rtl;float:right;}
+.MenuSpliterMP{width:1px;height:25px;background-color:#4fbe6f;float:right;margin-top:4px;}
+
+.OutRightMenuMP{width:100%;height:auto;}
+.HeaderRightMenuMP{width:100%;height:29px;background:url('../Resource/PicSite/HeaderMenu.png') no-repeat center;margin:1px 0 1px 0;font:600 9px/29px;text-align:right;direction:rtl;cursor:pointer;}
+.ContentRightMenuMP{width:165;border:0px solid #cbcfbe;margin:1px;height:auto;}
+.ContentLeftMP{width:165px;border:1px solid white;background-color:#f1f3f0;margin:0px 3px 0 3px;height:auto;}
+.hrLeftMP{width:80%;color:#b8bdb9;}
+.RightItemMenu{list-style:none;margin:5px;text-align:right;}
+
+.ContentfooterMenuMP{width:647px;border:0px solid #cbcfbe;margin:70px 19px 1px 1px;height:auto;}
+
+
+.SubMennu{width:99%;height:25px;border-bottom:1px dotted gray;cursor:pointer;text-align:right;
+          background: rgb(21, 156, 15);
+             background: -moz-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: -webkit-linear-gradient(90deg,#E6FFCC  0%, white 100%);
+             background: -o-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: -ms-linear-gradient(90deg, white 0%, #E6FFCC 100%);
+             background: linear-gradient(180deg, white 0%, #E6FFCC 100%);
+             filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=white,endColorstr=#E6FFCC);}
+.PicSubMenu{width:10%;height:100%;background:url('../Resource/PicSite/Arrow Left.png') no-repeat center;float:right;}
+.TextSubMenu{width:99%;height:100%;font:10px/29px;text-align:right;direction:rtl;
+             }
+.SubMennu:hover{background-color:red;}
+.TextSubMenu:hover{font-weight:600;background-color:white;}
+
+.hptopmenu {min-width: 70px; padding:0px 5px 0px 5px; font-size:12px; min-height: 35px; border-radius:5px; float: right;}
+
+.MainTopMenu{min-width: 70px; padding:0px 5px 0px 5px; font-size:12px; min-height: 35px; border-radius:5px; float: right;}
+.MainTopMenu:hover {background-color:#C2FF00; height:35px; line-height:35px; min-height:35px;}
+.MainTopMenu a{line-height:35px; color:White; }
+.MainTopMenu a:hover{line-height:35px; color:green; }
+
+.MainTopSelectMenu a{color:Black;}
+.MainTopSelectMenu{background-color:#F4F4F4 ;padding:0px 5px 0px 5px;color:Black;}
+.MainTopSelectMenu:hover {background-color:#F6F7EA ;color:Black;}
+.MainTopSelectMenu a:hover {color:Black;}
+
+a{text-decoration:none;}
+
+.atagmenutopproduct{font:8pt/20px ;width:120px;height:20px; padding:0px 10px 0x 10px; line-height:20px; float:right}
+.menutopproduct {font:8pt/20px ;width:120px;height:20px; line-height:20px; float:right; border-radius:1px}
+.menutopproduct:hover {text-shadow: 0px 0px 5px green; color:green; }
+
+/*--------------------- Library.aspx ----------------------------*/
+#Library1 {width:635px; text-align:center}
+#Library1 .search {width:620px; padding:5px; margin:11px 26px 5px 5px; border: 1px solid #979797; background-color:White}
+#Library1 .search #content{width:100%; float:right; padding:5px}
+#Library1 .search #content .lbl {width: 70px; direction: rtl; float: right; text-align: right; height: 25px; line-height: 25px; margin-right: 117px;}
+#Library1 .search #content .val {width: 210px; text-align: right; direction: rtl; float: right;}
+#Library1 .search #content .divbtn {width:70px; height:25px; line-height:25px; direction:rtl; float:right;margin: -2px 400px 5px 10px; position: absolute;}
+#Library1 #contentt{border:#666 1px dotted; border-radius: 5px; background:#F0FFE7; width:635px; height:auto; text-align:right; overflow:hidden; padding:5px; margin:16px 18px 10px 10px;}
+#Library1 #contentt:hover{background-color:White;text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);border-radius: 5px;
+               box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -webkit-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -moz-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);}
+#Library1 #contentt .title{width:100%; margin:5px 0px 0px 0px; float:right; text-align:center; font-size:20px}
+#Library1 #contentt .divimg {float:right; margin: 30px 0px 5px 0px;width:100%; text-align:center}
+#Library1 #contentt .summary {overflow:hidden; text-align:justify; margin: 10px 18px 10px 10px; width:600px; float:right}
+#Library1 #contentt .link {text-align:left; margin: 5px 0px 5px 16px; float:left}
+
+/*--------------------- LibraryView.aspx ----------------------------*/
+.LibraryView {width:645px; text-align:center; border-radius:5px; background-color:White; margin:10px 14px 10px 10px; padding:5px; height:auto}
+.LibraryView .headerLibrary {height:auto; padding:3px; width:100%; float:right}
+.LibraryView .titleLibrary {font-weight: bold; width: 100%; font-size: 14px; text-align: center; height: 25px; line-height: 25px; color: #06C; float: right; text-shadow: 0px 0px 12px rgba(150, 150, 150, 1); margin: 10px 0px 10px 0px;}
+.LibraryView .brdTop {width: 628px; margin-right: 3px; padding: 3px 3px 3px 3px; float: right; height: 25px; line-height: 25px; background-color: #EEFFC2; margin-top: 10px; }
+.LibraryView .idLibrary {text-align:right; width:200px; line-height:25px; height:25px; float:right; margin-right: 10px;}
+.LibraryView .typeLibrary{text-align:center; width:195px; line-height:25px; height:25px; float:right; margin-left: 10px;}
+.LibraryView .dateLibrary {text-align:left; width:200px; line-height:25px; height:25px; float:right; margin-left: 10px;}
+.LibraryView .contentTopLibrary { padding:3px; width:628px; float:right}
+.LibraryView .summaryLibrary {float: right; width: 635px; background: #EEFFC2; border-radius: 5px; margin-top: 10px; border: 1px;}
+.LibraryView .titrLibrary {color:#a1a1a1;font-size:.9em; text-align:right; width:100%; float:right; padding:5px 10px 0px 0px}
+.LibraryView .textLibrary {text-align:justify; direction:rtl; width:623px; float:right; padding:5px 10px 10px 0px}
+.LibraryView .picLibrary {text-align:center; border-radius:2px; height:320px; margin-top:10px; float:right; width:100%}
+.contentDownLibrary {padding:3px; width:100%; float:right}
+.texttLibrary {text-align:justify; width:623px; float:right; margin: 5px 7px 5px 0px;}
+.writerLibrary {display:block;text-align:left; color:#a1a1a1;font-size:.9em;float:left;width:100%}
+             
+/*---------------------Paging----------------------------*/
+
+.Pagingg {min-width: 20px; font-size:12px; min-height: 25px; background-color:maroon; margin-right:2px; border-radius:5px; float: right;}             
+.Pagingg:hover {background-color:#C2FF00; height:30px; line-height:30px; min-height:35px;}    
+.Pagingg a{line-height:30px; color:White;}
+.Pagingg a:hover{line-height:30px; color:green;}       
+.hplinkPaging {min-width: 20px; padding:0px 5px 0px 5px; font-size:12px; margin-right:2px; border-radius:5px; float: right;}  
+             
+/*---------------------basket----------------------------*/
+.basketdiv{background:#FFF; border:#000 1px solid; padding:0px;}
+.header{height:30px; line-height:20px; color:#FFF; font-weight:bold;  background:#333; padding-top: 5px; padding-bottom: 5px;width:650px; vertical-align:middle; 
+           background:-webkit-gradient(linear,left top,left bottom,from(#999999),to(#333333)); 
+           background:-moz-linear-gradient(top,#999999,#333333); 
+           filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999',endColorstr='#333333');}
+.footer{height:30px; line-height:20px; color:#FFF; font-weight:bold;  background:#333; padding-top: 5px; padding-bottom: 5px;width:650px; vertical-align:middle;
+           background:-webkit-gradient(linear,left top,left bottom,from(#333333),to(#999999)); 
+           background:-moz-linear-gradient(top,#333333,#999999); 
+           filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333',endColorstr='#999999');}
+           
+.titrname{width:185px; max-width:185px; min-width:185px; overflow:hidden; padding:0px; line-height: 27px; float:right}
+.titrcount{width:75px; max-width:75px; min-width:75px; padding:0px; line-height: 27px; float:right}
+.titroneprice{width:120px; max-width:120px; min-width:120px; padding:0px; line-height: 27px; float:right}
+.titrtotalprice{width:120px; max-width:120px; min-width:120px; padding:0px; line-height: 27px; float:right}
+.titrpic{width:70px; max-width:70px; min-width:70px; padding:0px; line-height: 27px; float:right}
+.titrdel {width:65px; max-width:65px; min-width:65px; padding:0px; line-height: 27px; float:right}
+
+.getpriceall{padding: 5px; float: right; width: 40px; margin-right: 155px;}
+.divbtnbuybasket{text-align:center; padding:5px; float:right; width:650px}
+
+.titrshomarefactor{width:94px; max-width:94px; min-width:94px; overflow:hidden; padding:0px; line-height: 27px; float:right}
+.titrtarikhpardakht{width:115px; max-width:115px; min-width:115px; padding:0px; line-height: 27px; float:right}
+.titrgift{width:125px; max-width:125px; min-width:125px; padding:0px; line-height: 27px; float:right}
+.titrmablaghpardakhti{width:94px; max-width:94px; min-width:94px; padding:0px; line-height: 27px; float:right}
+.titrvazeiat{width:120px; max-width:120px; min-width:120px; padding:0px; line-height: 27px; float:right}
+.titrtarikhersal{width:100px; max-width:100px; min-width:100px; padding:0px; line-height: 27px; float:right}
+
+.satr{width:650px;}
+.satrContent{background:-webkit-gradient(linear,left top,left bottom,from(#E8E8E8),to(#CCCCCC)); 
+      background:-moz-linear-gradient(top,#E8E8E8,#CCCCCC); 
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8E8E8',endColorstr='#CCCCCC');}
+/*.selectDropDown{border:#999 1px solid; padding:1px; font-size:12px; font-weight:bold; color:#F00; width:50px; cursor:pointer;}*/
+.satrContent:hover {background:white; color:red;}
+.satrContent:hover a{border-bottom:blue 1px solid;}
+/*.satrContent:hover select{color:red;}*/
+
+input[type=button],input[type=submit]{ min-width:50px; cursor:pointer}
+
+.labelE{width:135px; float:right; text-align:left; height:25px; line-height:25px}
+
+.valueE{width: 200px; height: 20px;}
+.valueEddl{height: 30px;
+width: 208px;
+border: 1px dotted #48D848;}
+
+#menuBasket{text-align:center; padding:5px; width:100px; min-width:100px; max-width:100px; height:30px; line-height:30px; vertical-align:middle; float:right;} 
+    
+.gb{-webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; 
+    -moz-border-top-left-radius:10px; -moz-border-top-right-radius:10px; 
+    -ms-border-top-left-radius:10px; -ms-border-top-right-radius:10px;
+    border-top-left-radius:10px; border-top-right-radius:10px;}
+.gp{-webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; 
+    -moz-border-bottom-left-radius:10px; -moz-border-bottom-right-radius:10px;
+    -ms-border-bottom-left-radius:10px; -ms-border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px; border-bottom-right-radius:10px;}    
+
+#menuBasket:hover{background-color:Maroon; color:White; font-weight:bold; border-radius:5px;}
+
+/*-------------------------buy basket (display gift)-------------------------*/
+.imggift{width:50px; height:50px}
+.imggift:hover{width: 80px; height: 80px; z-index: 999; position: relative; margin: -14px -14px 5px 5px; border:none}
+
+/*-------------------------login-------------------------*/
+.loginpr{width:160px; text-align:center;}
+.loginpr .divsatr {padding:2px; width:155px; float:right}
+.loginpr .alert {text-align:center; color:red; width:155px; float:right}
+.loginpr .lbl{padding:2px; width:60px; float:right; text-align:left; direction:rtl; font-size:12px}
+.loginpr .val{padding:2px; text-align:center; width:85px; float:right}
+.loginpr .forgatpass{font-size:12px; width:155px; float:right}
+.loginpr .lblwelcome{padding:2px;  direction:rtl; font-size:12px; width:155px; float:right}
+.loginpr .btn {padding:2px; width:55px; text-align: center}
+.loginpr .divbtn{text-align:center; padding:5px; float:right; width:155px}
+.loginpr .rowbtn{width:75px; float:right}
+.txtlogin{min-height:15px; height:15px}
+
+/*-------------------------LittleBbasket--------------------------*/
+.KoBo{width:80px; padding-top:0px; height:25px; margin:-15px -11px -10px auto; position:absolute; font-size:10px;}
+#Basket{width:230px; min-height:50px; position:fixed; top:185px; text-align:center; overflow:visible; margin-right:695px;}
+#GotoBasket{width:200px; height:200px; padding:0px; background:#CCC; border:#666 1px solid; position:absolute; display:none;}
+#Basket #BasketBox{margin-top:-4px; margin-right:-15px; height:30px; padding:0px; width:260px;}
+
+/*-------------------------Forget Password--------------------------*/
+#forgetPass {padding:5px; margin-top:20px; width:333px; border:1px #096 double}
+#forgetPass #title {padding:5px; height:30px; line-height:30px; font-size:11px; vertical-align:middle; color:#003008; font-weight:bold; margin:-4px;
+                    background:-webkit-gradient(linear,left top,left bottom,from(#159C0F),to(#98DFBA));
+                     background:-moz-linear-gradient(top,#159C0F,#98DFBA);
+                     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#159C0F',endColorstr='#98DFBA')}
+#forgetPass #rowstxt {padding:2px; text-align:right; width:100%}
+#forgetPass #Lable {padding:2px; width:60px; float:right; text-align:left}
+#forgetPass #txtuserpass {padding:2px; width:220px; text-align:right; float:right; }
+
+
+/*-------------------------change Password--------------------------*/
+#changePass {padding:5px; margin-top:20px; width:300px; border:1px #096 double; height:auto}
+#changePass #title {padding:5px; width:300px; height:30px; line-height:30px; font-size:11px; vertical-align:middle; color:#003008; font-weight:bold; margin:-4px; background-color:#096; float:right;
+                    background:-webkit-gradient(linear,left top,left bottom,from(#159C0F),to(#98DFBA));
+                     background:-moz-linear-gradient(top,#159C0F,#98DFBA);
+                     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#159C0F',endColorstr='#98DFBA')}
+#changePass #rowstxt {padding:2px; text-align:right; width:300px; float:right}
+#changePass #Lable {padding:3px; width:95px; float:right; text-align:left}
+#changePass #val {padding:3px; width:180px; text-align:right; float:right; }
+#changePass .txt {Width:180px; Height:25px}
+
+/*--------------------------captcha-----------------------------*/
+#divcaptcha {margin-right:10px; margin-top:10px; padding:5px; padding-top:10px; text-align:center; float:right}
+#imgcaptcha {text-align: center; width:140px; height:50px; border-color:Maroon; border-style:solid; border-width:1px}
+#valuecaptcha {padding:5px; margin-top:15px; width:110px; text-align:right; float:right; }
+.txtboxCaptcha{letter-spacing: 9px; text-align:center; direction:rtl; font-size:20px; width:110px; height:46px}
+#jahat {padding:5px; margin-top:30px; width:20px; text-align:right; color:Maroon; font-weight:bold; float:right;}
+
+/*-------------------------contact us--------------------------*/
+#contactus{width:650px; text-align:center; direction:rtl; background-color:White; border: 1px solid #979797; margin:25px 5px 5px 5px; border-radius:5px; padding:5px}
+#contactus #divsatr {padding:5px; width:100%; float:right}
+#contactus #lbl {width:80px; text-align:left; float:right; padding:2px}
+#contactus #value {padding:2px; text-align:right; float:right; width:550px}
+#contactus .Space {margin-right:10px}
+#contactus .txtbox {width: 200px;
+height: 25px;
+border: 1px dotted green;
+color: #336;
+border-radius: 5px;}
+#contactus #lblfceditor {text-align:right;width:80px; padding:5px}
+#contactus #btn {padding:5px; margin-top:25px; margin-right:60px; width:80px; float:right;}
+#contactus .btn {width:60px; height:30px}
+#contactus .ddlCU {border:1px dotted #48D848; Width:208px; Height:30px; line-height:30px; vertical-align:top}
+
+/*-------------------------search--------------------------*/
+#searchCM{width:650px; text-align:center; direction:rtl; background-color:White; border: 1px solid #979797; margin:25px 10px 5px 5px; border-radius:5px; padding:5px}
+#searchCM .divsatrS {padding:5px; width:100%; float:right}
+#searchCM .lblS {width:80px; text-align:left; float:right; padding:2px; height:25px; line-height:25px}
+#searchCM .valueS {padding:2px; text-align:right; float:right; width:550px}
+#searchCM .Space {margin-right:10px}
+#searchCM .txtbox {width: 180px; height: 25px; border: 1px dotted green; color: #336; border-radius: 5px;}
+#searchCM #lblfceditor {text-align:right;width:80px; padding:5px}
+#searchCM #btn {padding:5px; margin-top:25px; margin-right:60px; width:80px; float:right;}
+#searchCM .btn {width:60px; height:30px}
+#searchCM .ddlS {border:1px dotted #48D848; Width:188px; Height:30px; line-height:30px; vertical-align:top}
+
+.TextAreaS{height:120px; width:400px; border: 1px dotted green; color: #336; border-radius: 5px;}
+
+/*-------------------------Pre Factor--------------------------*/
+.prefactor {padding:5px; margin:5px; width:650px; text-align:center; font-Size:12px}
+.prefactor #sh_factor {height:25px; padding:5px; background-color:Menu; text-align:center; font-weight:bold; float:right; width:100%}
+.prefactor #div_satr{padding: 8px 5px 8px 5px; float:right; width:100%}
+.prefactor #lbl1{float:right; width:110px;min-width:110px; max-width:110px; text-align:right}
+.prefactor #lbl2{float:right; width:80px; min-width:80px; max-width:80px; margin-right:40px; text-align:right; text-align:right}
+.prefactor #val{width:170px; float:right; min-width:170px; max-width:170px; text-align:right}
+.prefactor #lblmail {float:right; min-width:50px; max-width:50px; width:50px; margin-right:40px; text-align:right}
+.prefactor #valmail {width:220px; min-width:220px; max-width:220px; float:right; text-align:right}
+.prefactor #valname{width:200px; min-width:200px; max-width:200px; float:right; text-align:right}
+.prefactor #lbltel {float:right; width:80px; min-width:80px; max-width:80px; text-align:right}
+.prefactor #valtel {width:130px; min-width:130px; max-width:130px; float:right; text-align:right}
+.prefactor #lblhamrah {float:right; width:50px; min-width:50px; max-width:50px; margin-right:40px; text-align:right}
+.prefactor #valhamrah{width:110px;min-width:110px; max-width:110px; float:right; text-align:right}
+.prefactor #lbladrs{float:right; width:50px; text-align:right}
+.prefactor #valadrs{width:550px; float:right; text-align:justify}
+.prefactor #lbl_code_commn {float:right; width:70px; text-align:right}
+.prefactor #valcode {width:100px; float:right; text-align:justify}
+.prefactor #valcommn {width:550px; float:right; text-align:justify}
+.prefactor .baskethead {float:right; padding:5px; margin-top:30px; text-align:center; width:640px; vertical-align:middle}
+.prefactor .titrprefact{padding:5px; float:right; }
+.prefactor .strfacor{padding:5px; text-align:center; width:640px; height:30px}
+.prefactor 
+.basketfoot{float:right; text-align:center; width:640px;}
+
+/*-------------------------login or register --------------------------*/
+#loginOrRegister{text-align: center; float: right; width: 650px; background-color:White; padding: 50px 10px 0px 10px; border:1px dotted #666; margin-top:20px; margin-right:5px}
+#loginOrRegister .register{padding: 5px; float: right; text-align: center; width: 320px; margin-right:15px}
+#loginOrRegister .register .headerR { font-size: 12px;  padding-bottom: 5px; line-height: 28px; height: 30px; margin-bottom: 20px;}
+#loginOrRegister .register .satr {padding: 2px}
+#loginOrRegister .register .lbl {padding: 2px; width: 80px; float: right; text-align: left; direction: rtl; font-size: 12px}
+#loginOrRegister .register .val {padding: 2px; text-align: right}
+#loginOrRegister .line {border-left: 1px dotted maroon; padding: 1px; height: 280px; text-align: center;float: right;}
+#loginOrRegister .login{padding: 5px; text-align: center; width: 280px; float: right}
+#loginOrRegister .login .headerL{ font-size: 12px; padding-bottom: 5px; background-color: #92FF5F; line-height: 28px; height: 30px; margin-bottom: 20px;}
+#loginOrRegister .login .forgatpass{font-size: 10px;}
+#loginOrRegister .login .lbl{padding: 2px; width: 80px; float: right; text-align: left; direction: rtl; font-size: 12px}
+#loginOrRegister .login .val{padding: 2px; text-align: right}
+
+/*-------------------------Register.aspx --------------------------*/
+#RegisterCo {padding: 5px; width: 650px; border-radius: 5px; border: 1px solid #979797; background-color:White; text-align: right; margin: 11px 11px 5px 5px;}
+
+/*-------------------------main (product) --------------------------*/
+.probox {border:#666 1px dotted; margin:5px; text-align:center; width:205px; height:320px; background-color:#E2FFC3; overflow:hidden; color:#999;}
+.probox .top{width:205px; height:150px; float:right;}
+.probox .down{width:205px; height:170px; float:right;}
+.probox .deluxe{width:50px; height:50px; padding:0px; background:url(../Resource/PicSite/deluxe.png) no-repeat top center; position:absolute; margin:-14px 168px auto auto;}
+.probox .name {width:100%; text-align:center; float:right}
+.probox .codeprice {width: 205px; padding:2px; text-align: center; float:right}
+.probox .introtext {margin-right:5px; text-align:justify; font-size:11px; color:#777; padding:2px; width:185px; height:60px; overflow:hidden; float:right}
+.probox .BorderMP{border:1px solid #c5cdb6;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+.probox:hover{color:#111; background:#FCFCFC; border:#066 1px solid; text-shadow:#333 1px 2px 6px; box-shadow:#527195 3px 5px 10px;}
+.probox:hover .introtext{color:#333; text-shadow:none;}
+.probox:hover a{font-weight:normal; text-shadow: -1px 0 5px #0FF, 0 1px 10px #0FF;}
+.probox .dimg{border:#FFF 1px solid; margin:5px; width:130px; height:140px}
+.probox:hover .dimg{border:#333 1px solid; box-shadow:#CCC 3px 7px 10px;}
+.probox:hover strong{text-shadow:#F30 -2px 0px 7px;}
+.probox strong{color:#666; padding-left:10px; padding-right:10px;}
+.probox b{color:#666; padding-left:10px; padding-right:10px; line-height:30px;}
+.probox:hover b{text-shadow:#FF0 -2px 0px 7px;}
+.probox img{cursor:pointer;}
+.probox img.soldimg{cursor:default;}
+.probox a{border:none;color:#000;}
+
+
+/*------------------------- news --------------------------*/
+
+#news{border:#666 1px dotted; border-radius: 5px; background:#F0FFE7; width:635px; height:120px; text-align:right; overflow:hidden; padding:5px; margin:16px 18px 10px 10px;}
+#news:hover{ background-color:White; text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);border-radius: 5px;
+               box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -webkit-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);
+               -moz-box-shadow: 1px 1px 8px 1px rgba(143,143,143,1);}
+#news .title{width:520px; float:right}
+#search {width:632px; padding:5px; margin:11px 19px 5px 5px; border-radius:5px; border:1px solid #979797; background-color:White}
+#search .title {width:70px; direction:rtl; float:right; text-align:right; height: 25px; line-height: 25px;}
+#search .txtboxdiv {width:248px; text-align:right; direction:rtl; float:right}
+#search .from {width:43px; direction:rtl; float:right; text-align:right; margin-right:2px; height: 25px; line-height: 25px;}
+#search .txtdivfrom {width:83px; text-align:right; direction:rtl; float:right}
+#search .to {width:20px; direction:rtl; float:right; text-align:right; margin-right:2px; height: 25px; line-height: 25px;}
+#search .txtdivTo {width:80px; text-align:right; direction:rtl; float:right}
+#search .divbtn {width:70px; direction:rtl; float:right; margin-right:8px; height:25px; line-height:25px}
+#search .btnsearchnews { }
+#news .VisitCount{width:110px; float:right; text-align:left}
+.txtboxsearchnews {height: 25px; border: 1px dotted green !important; color: #336; border-radius: 5px;}
+.txtareasearchnews {border: 1px dotted green !important; color: #336; border-radius: 5px;}
+
+#news .divimg {float:right; margin: 0px 5px 5px 0px;width:100px}
+#news .summary {height:80px; float:right; width:530px}
+#news .summary .title {width:520px; margin-right: 8px; float:right}
+#news .summary .text {overflow:hidden; text-align:justify; margin-right: 8px; width:520px; float:right}
+
+/*------------------------- newsDetails --------------------------*/
+
+.newsDetails {width:645px; text-align:center; border-radius:5px; margin:10px 14px 10px 10px; padding:5px; height:auto}
+.headernews {height:70px; padding:3px; width:100%; float:right}
+.titlenews {font-weight: bold; width:100%; font-size: 12px; text-align: center; height: 25px; line-height: 25px; color: blue; float:right}
+.datenews {text-align:left; width:100%; line-height:20px; height:20px; float:left; margin-left: 10px;}
+.idnews {text-align:left; width:100%; line-height:20px; height:20px; float:left; margin-left: 10px;}
+.contentTopnews {height:195px; padding:3px; width:100%; float:right}
+.summarynews {float:right; width:350px; height:175px;  background:#EEE; border-radius:5px; margin:5px; padding:5px}
+.titrnews {color:#a1a1a1;font-size:.9em; text-align:right; width:100%; float:right}
+.textnews {text-align:justify; direction:rtl; width:100%; float:right}
+.picnews {text-align:left; border-radius:2px; margin:5px 15px 0px 0px; padding:5px; float:right; width:250px}
+.contentDownnews {padding:3px; width:100%; float:right}
+.texttnews {text-align:justify; width:100%; float:right}
+.endnews {display:block;text-align:left; color:#a1a1a1;font-size:.9em;float:left;width:100%}
+.writernews {display:block;text-align:right;font-size:.9em; width:100%; float:right}

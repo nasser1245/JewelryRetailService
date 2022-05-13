@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4DAE472-68AB-4ACF-920F-1764F8C9D822}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HProtest_BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Persia">
+      <HintPath>..\..\..\ShayanJavaher\BLL\bin\Debug\Persia.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessLevel\AccessLevelTransfer.cs" />
+    <Compile Include="AccessLevel\AccessLevel.cs" />
+    <Compile Include="AccessLevel\AccessLevelData.cs" />
+    <Compile Include="Advertise\AdvertiseData.cs" />
+    <Compile Include="Advertise\AdvertiseTransfer.cs" />
+    <Compile Include="Basket\BasketData.cs" />
+    <Compile Include="Basket\BasketTransfer.cs" />
+    <Compile Include="Captcha\Captcha.cs" />
+    <Compile Include="Captcha\CaptchaResult.cs" />
+    <Compile Include="ClassView\ContactUs.cs" />
+    <Compile Include="ClassView\Library.cs" />
+    <Compile Include="ClassView\News.cs" />
+    <Compile Include="ClassView\Products.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ContactFAQ\ContactData.cs" />
+    <Compile Include="ContactFAQ\ContactTransfer.cs" />
+    <Compile Include="GetData.cs" />
+    <Compile Include="InfoSite\InfoSiteData.cs" />
+    <Compile Include="Library\LibraryData.cs" />
+    <Compile Include="Library\LibraryTransfer.cs" />
+    <Compile Include="Mail\Mail.cs" />
+    <Compile Include="Mail\MailBody.cs" />
+    <Compile Include="Manager\ManagerData.cs" />
+    <Compile Include="Mermber\MemberChecking.cs" />
+    <Compile Include="Mermber\MemberData.cs" />
+    <Compile Include="Mermber\MemberTransfer.cs" />
+    <Compile Include="News\NewsData.cs" />
+    <Compile Include="News\NewsTransfer.cs" />
+    <Compile Include="Opinion\OpinionData.cs" />
+    <Compile Include="Opinion\OpinionTransfer.cs" />
+    <Compile Include="PageItem.cs" />
+    <Compile Include="Product\ProductTransfer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyData.cs" />
+    <Compile Include="Tracking.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9ECFBB62-51B0-4C9A-A9F7-0E45A1DD70C0}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Action\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

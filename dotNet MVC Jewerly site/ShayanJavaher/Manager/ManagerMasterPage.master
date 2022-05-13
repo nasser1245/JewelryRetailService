@@ -1,0 +1,229 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ManagerMasterPage.master.cs" Inherits="Manager_ManagerMasterPage" %>
+
+
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+<title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+
+    <asp:PlaceHolder runat="server"> 
+    <%--<link href="../HomePage/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../HomePage/CSS/submain.css" rel="stylesheet" type="text/css" />--%>
+    <link href="Css/css.css" rel="stylesheet" type="text/css" />
+    <link href="Css/Poll.css" rel="stylesheet" type="text/css" />
+
+    <link href='<%= Page.ResolveUrl("~/Manager/Css/css.css")%>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/Manager/Css/CssSubAdmin.css")%>' rel="stylesheet" type="text/css" />
+
+    <script src='<%= Page.ResolveUrl("~/Js/jquery-1.7.2.min.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Manager/Js/ckeditor/ckeditor.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Manager/Js/ckeditor/adapters/jquery.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/Manager/Js/Common.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/JS/ajax.js")%>' type="text/javascript"></script>
+    <script src='<%= Page.ResolveUrl("~/JS/Util.js")%>' type="text/javascript"></script>
+    </asp:PlaceHolder>
+    <%--<script src="../Js/ckeditor/_samples/sample.js")" type="text/javascript"></script>--%>
+
+
+   <%-- <link href='<%= ResolveClientUrl("Css/css.css")%>' rel="stylesheet" type="text/css" />
+    <link rel="Stylesheet" type="text/css" href='<%= ResolveClientUrl("Css/CssSubAdmin.css")%>' />
+--%>
+
+    <asp:ContentPlaceHolder ID="HeadsCPH" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+<body>
+<form runat="server">
+    <div id="container">
+
+        <div id="layout">
+            <div class="corner cor-tl">
+            </div>
+            <div class="corner cor-t">
+            </div>
+            <div class="corner cor-tr">
+            </div>
+            <div class="corner cor-r">
+            </div>
+            <div class="corner cor-rb">
+            </div>
+            <div class="corner cor-b">
+            </div>
+            <div class="corner cor-bl">
+            </div>
+            <div class="corner cor-l">
+            </div>
+
+
+                    <div id="top_bar" style="text-align:right;direction:rtl; margin-right:10px">
+                        خوش آمدید <asp:Label ID="lblUserName" runat="server" Text="" Font-Bold="True"></asp:Label> | <asp:LinkButton ID="lbChangePassword" runat="server" onclick="lbChangePassword_Click">تغییر رمز عبور</asp:LinkButton> | <asp:LinkButton ID="lbExit" runat="server" onclick="lbExit_Click">خروج</asp:LinkButton>
+                    </div>
+            <div style="width: 800px; height: 2px; margin: 0 auto; border-bottom: solid 1px #999999">
+            </div>
+     <div id="right_bar">
+    <br />
+    <br />
+    <div class="t-rtl">
+
+
+    <%--    <div style="width:110px; height:130px; padding:0px; margin:-70px 850px -60px auto; position:relative; z-index:9999"><asp:Image ID="imgMember" runat="server" Width="110px" Height="130px" /></div>
+--%>
+    <div class="treeBox">
+    <%
+        if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).ProductAgent == true)
+      { %>
+    <span class="header">محصولات</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="AddProduct" runat="server" onclick="lbManagePagesP_Click">اضافه کردن محصول</asp:LinkButton></li>
+        <li><asp:LinkButton ID="ProductList" runat="server" onclick="lbManagePagesP_Click">لیست محصولات</asp:LinkButton></li>
+        <li><asp:LinkButton ID="ProductType" runat="server" onclick="lbManagePagesP_Click">گروه بندی محصولات</asp:LinkButton></li>
+        
+        <li class="footer"></li>
+    </ul>
+    <% }%>
+            <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).SellAgent == true)
+      { %>
+
+
+     <span class="header">سفارشات</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="BasketList" runat="server" onclick="lbManagePagesBasket_Click">سفارشات رسیده</asp:LinkButton></li>
+        <li><asp:LinkButton ID="FicheList" runat="server" onclick="lbManagePagesBasket_Click">فیش های ثبت شده</asp:LinkButton></li>
+        <li><asp:LinkButton ID="BuyStatus" runat="server" onclick="lbManagePagesBasket_Click">تعیین وضعیت</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+        <% }%>
+       
+        <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).SupportAgent == true)
+      { %>
+
+     <span class="header">ارتباط با کاربران</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="FAQ" runat="server" onclick="lbManagePagesContact_Click">پرسش و پاسخ</asp:LinkButton></li>
+        <li><asp:LinkButton ID="ContactUs" runat="server" onclick="lbManagePagesContact_Click">تماس با ما</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+        <% }%>
+
+        <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).NewsAgent == true)
+      { %>
+        <span class="header">اخبار</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="NewsContent" runat="server" onclick="lbManagePagesN_Click">درج خبر</asp:LinkButton></li>
+        <li><asp:LinkButton ID="NewsList" runat="server" onclick="lbManagePagesN_Click">لیست اخبار</asp:LinkButton></li>
+        <li><asp:LinkButton ID="NewsCategory" runat="server" onclick="lbManagePagesN_Click">گروه اخبار</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+    <% }%>
+    <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).LibraryAgent == true)
+      { %>
+        <span class="header">کتابخانه</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="LibraryCategory" runat="server" onclick="lbManagePagesL_Click"> گروه بندی کتاب </asp:LinkButton></li>
+        <li><asp:LinkButton ID="LibraryContent" runat="server" onclick="lbManagePagesL_Click">درج کتاب</asp:LinkButton></li>
+        <li><asp:LinkButton ID="LibraryList" runat="server" onclick="lbManagePagesL_Click">لیست کتاب</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+    <% }%>
+     <%--<span class="header">اطلاعات سایت</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="AboutUs" runat="server" onclick="lbManagePagesMoreInfo_Click">درباره ما</asp:LinkButton></li>
+        <li><asp:LinkButton ID="BuyHelp" runat="server" onclick="lbManagePagesMoreInfo_Click">راهنمای خرید</asp:LinkButton></li>
+        <li><asp:LinkButton ID="Size" runat="server" onclick="lbManagePagesMoreInfo_Click">راهنمای سایز</asp:LinkButton></li>
+
+        <li class="footer"></li>
+    </ul>
+        <% }%>--%>
+        <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).ManagerAgent == true)
+      { %>
+            <span class="header">مسئولان</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="MemberContent" runat="server" onclick="lbManagePagesU_Click">افزودن مدیر</asp:LinkButton></li>
+        <li><asp:LinkButton ID="MemberList" runat="server" onclick="lbManagePagesU_Click">لیست مدیران</asp:LinkButton></li>
+        
+        <li class="footer"></li>
+    </ul>
+
+        <% }%>
+
+        <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).UserAgent == true)
+      { %>
+            <span class="header">کاربران</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="UserList" runat="server" onclick="lbManagePagesU_Click">لیست کاربران</asp:LinkButton></li>
+        
+        <li class="footer"></li>
+    </ul>
+
+        <% }%>
+
+
+        <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).UserAgent == true)
+      { %>
+
+     <span class="header">نظرسنجی</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="OpinionContent" runat="server" onclick="lbManagePagesPoll_Click">درج نظرسنجی</asp:LinkButton></li>
+        <li><asp:LinkButton ID="OpinionList" runat="server" onclick="lbManagePagesPoll_Click">لیست نظرسنجی ها</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+        <% }%>
+      <%
+                 if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).AdvertiseAgent == true)
+      { %>
+
+     <span class="header">تبلیغات</span>
+    <ul class="expand">
+        <li><asp:LinkButton ID="Advertise" runat="server" onclick="lbManagePagesAdvertise_Click">درج تبلیغ</asp:LinkButton></li>
+        <li class="footer"></li>
+    </ul>
+        <% }%>
+    <%
+            if (Page.User.IsInRole("1") || ((HProtest_BLL.AccessLevel.AccessLevel)HttpContext.Current.Session["AccessLevel"]).LibraryAgent == true)
+      { %>
+        <span class="header">اطلاعات سایت</span>
+    <ul class="expand">
+                <li><asp:LinkButton ID="AboutUs" runat="server" onclick="lbManagePagesMoreInfo_Click">درباره ما</asp:LinkButton></li>
+
+                <li><asp:LinkButton ID="BuyInfo" runat="server" onclick="lbManagePagesMoreInfo_Click">راهنمای خرید</asp:LinkButton></li>
+
+                <li><asp:LinkButton ID="Size" runat="server" onclick="lbManagePagesMoreInfo_Click">راهنمای سایز</asp:LinkButton></li>
+
+        <li class="footer"></li>
+    </ul>
+    <% }%>
+
+
+</div>
+
+ 
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div id="contain">
+                <asp:ContentPlaceHolder ID="BodyCPH" runat="server">
+                </asp:ContentPlaceHolder>
+&nbsp;<div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+</form>
+</body>
+
+</html>

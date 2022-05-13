@@ -1,0 +1,37 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main_MasterPage.master" AutoEventWireup="true" CodeFile="ResultPoll.aspx.cs" Inherits="ResultPoll" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="plContentMP" Runat="Server">
+
+
+<asp:Panel ID="Panel3" runat="server" DefaultButton="btnAdd">
+    <div style="min-width:400px; min-height:100px; background-color:Yellow">
+            <div style="width:100%"><%# Eval("Question") %></div>
+
+        <asp:Repeater ID="RptViewResult" runat="server">
+        <ItemTemplate>
+            <div style="width:100%; float:right">
+
+                <div style="min-width:80px; float:right"><%# Eval("OptionOrder") %></div>
+                <div style="min-width:80px; float:right"><%# Eval("HitCount")%></div>
+                <div style="min-width:130px; float:right"><%# Eval("Text") %></div>
+            </div>
+            <div style="background-color: #F1F1F1; height: 18px; width:100%; text-align:right; border: 1px solid #D1D1D1; position: relative;">
+                <div style="font-size: 2px; background: #3478E3; text-align:right; height: 18px; width:50%"></div>
+            </div>
+        </ItemTemplate>
+        </asp:Repeater>
+            <div><asp:Button ID="btnAdd" runat="server" Text="بازگشت" /></div>
+    </div>
+</asp:Panel>
+
+                                    <%--------------------- نظر سنجی --------------------------------%>
+
+                    <div>
+<iframe src="http://www.aparat.com/video/video/embed/videohash/0yG9K/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" height="360" width="640" ></iframe>
+                    </div>
+
+
+</asp:Content>
+

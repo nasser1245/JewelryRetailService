@@ -1,0 +1,94 @@
+﻿
+textarea{font:9pt/20pt Tahoma;direction:rtl;text-align:right;max-width:350px;min-width:350px;max-height:100px;min-height:100px;border:1px solid black;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;margin:5px 8px 0 0;padding:5px;}
+
+
+
+.LableLetter{width:15%;height:auto;float:right;margin:5px;}
+.ValueLetter{width:80%;height:auto;float:right;margin:5px;}
+.PollOption{width:70%;height:auto;display:none;}
+.LablePollO{width:25%;height:auto;float:right;margin:5px;}
+.ValuePollO{width:60%;height:auto;float:right;margin:5px;}
+
+/*------------------------------------نتایج نظرسنجی-------------------------------------*/
+.Poll{border:1px solid #111;line-height:20px;}
+.Poll,.titleP,questionP,.optionsP,.inOptionsP,.AnalysisP,.Analysis{width:100%;height:auto;text-align:right;}
+.questionP,.titleP,.optionsP,.inOptionsP{float:right;}
+.Pbtn{width:50%;float:right;}
+
+.AnalysisP{margin:10px;line-height:25px;}
+
+.poll_bar_inner {
+    background-color: #AEE303;
+    float: right;
+    height: 12px;
+    margin-top: 2px;
+    overflow: hidden;
+}
+
+.poll_bar_outter {
+    background: url("/Content/PicSite/poll_bg.gif") no-repeat scroll center top transparent;
+    height: 16px;
+    overflow: hidden;
+    padding: 1px 6px;
+}
+
+.poll_percent {
+    color: #000000;
+    font: 10px Tahoma;
+}
+
+.poll_options {
+    color: #444444;
+    font: 11px Tahoma;
+}
+
+/*--------------------------------------عمومی--------------------------------------*/
+#right_bar{width:180px;height:auto;float:right;margin-right:10px;padding:0;border-left:solid 4px #f7f7f7}
+#contain{width:782px;min-height:500px;vertical-align:top;text-align:justify;height:auto;float:right;position:relative;border-right:solid 4px #f7f7f7}
+
+.AllContent{width:100%;height:auto;font:9pt/20px Tahoma;padding-right:5px;}
+.AllContentP{width:100%;height:auto;font:9pt/20px Tahoma;padding:10px}
+.Label{width:80px;text-align:right;direction:rtl;float:right;height:25px;}
+.Value{text-align:right;direction:rtl;float:right;width:670px;height:25px;line-height:25px;}
+.TextArea{height:120px;}
+
+
+.DivParentRepeater{width:100%;text-align:right;direction:rtl;}
+/*------------------------------------گروهبندی-------------------------------------*/
+
+
+.LeftContent{width:48%;float:right}
+.RightContent{width:48%;float:right;margin-top:5px;}
+.SolidContent{width:98%;}
+.Titlerpt{width:70%;background-color:Lime;}
+.TitlerptSpan{min-width:23%;}
+
+/*-----------------------------------درج محصول--------------------------------------*/
+.ProuductAbout,.FieldsKey{width:95%;;padding-right:5px; border-color:lightblue;}
+.UploadFile{width:20%;float:right;}
+.FileUploadValue{width:40%;float:right;}
+.PicLabel{width:20%;float:right;}
+.MultiLineText{float:right;
+}
+.PdProduct{padding-right:5px; border-color:lightblue;}
+.line{border-bottom-color:Maroon; border-bottom-style:solid; border-bottom-width:1px}
+
+.LabelP{width:15%;overflow:hidden;min-height:25px;float:right;margin-bottom:5px}
+.ValueP{width:80%;overflow:hidden;min-height:25px;float:right;margin-bottom:5px}
+/*----------------------------------- اشانتیون ها------------------------------------*/
+.FloatedLabelValue{float:right;padding-left:10px}
+
+
+.imgAbsolute{position: absolute;left: 20px;top: 20px;}
+
+
+
+#HeaderGridProduct{width:100%;height:30px;border-bottom:2px solid gray;}
+.TopGridProduct{font:600 9pt/30px Tahoma;text-align:center;direction:rtl;height:30px;width:12%;border-left:1px solid gray;float:right;}
+.FieldGrid{width:12%;height:105px;text-align:center;vertical-align:middle;font:9px/20px Tahoma;float:right;border-left:1px solid gray;}
+
+/*----------------------------------member ---------------------------------*/
+
+.CheckBoxM{width:25%; min-height:25px; float:right;}
+.BigLabelM{width:65%;float:left; overflow:hidden;}
+.FieldValueM{width:99%;max-height:30px;float:left;font:9pt/20px Tahoma;padding-right:5px;}

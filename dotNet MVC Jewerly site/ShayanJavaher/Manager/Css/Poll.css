@@ -1,0 +1,53 @@
+﻿/*
+*{margin:0;padding:0}
+/*img, div ,a, input { behavior: url(iepngfix.htc) }
+ */
+/*.clear{clear:both}
+
+body{font:9pt tahoma;line-height:30px;direction:rtl}
+
+
+
+
+fieldset .header{width:100%;line-height:20px;clear:both;background:#444;color:White;height:20px;border-radius:5px;}
+fieldset .header span,fieldset .list span{width:80px;text-align:center;line-height:20px;display:block;float:right;margin:0 0px}
+fieldset .list{border-radius:5px;}
+.border
+{ border:hidden 5px #b1cae0; -moz-border-radius: 5px;-webkit-border-radius: 5px; border-radius: 5px; background-color:#D3D3D3;
+    width:98%;
+    margin:20px;
+}
+.left
+{float:left;padding-left:10px;
+    height: 25px;
+}
+.right
+{float:right}
+.clear
+{clear:both}
+input[type=text]
+{
+border: 0px solid rgba(0,0,0,0);background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+-moz-box-shadow: 0 0 0 black, inset 0 1px 0 white;box-shadow: 0 0 0 black, inset 0 1px 0 white;
+border-radius:10px;}
+ input:focus {
+border: 1px solid #09C;
+}
+input[type=submit] { border-radius: 0.5em 0.5em 0.5em 0.5em;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);cursor: pointer;display: inline-block;
+font: 14px/100% Arial,Helvetica,sans-serif; margin: 0 2px;outline: medium none; padding: 0.5em 2em 0.55em;text-align: center;text-decoration: none;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);vertical-align: baseline;
+background: -moz-linear-gradient(center top , #FFFFFF, #EDEDED) repeat scroll 0 0 transparent;border: 1px solid #B7B7B7;color: #606060;height:30px}
+.label
+{ width:50px;display: inline-block;margin-right:10px;}
+.odd
+{}
+.even
+{ background-color:#829DBA;display:block; height:35px;}
+.border
+{ border-radius:15px; background-color: #C0C0C0;padding-right:5px;margin:10px;}
+.content
+{padding:15px;}
+
+.removebutton{ background: url(../img/delete.png) no-repeat;  }*/
+  
+
+
