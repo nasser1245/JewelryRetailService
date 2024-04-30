@@ -1,2 +1,2 @@
 # JewelryRetailService
-.Net MVC Jewelry Retail Web-Service
+.Net MVC Jewelry Retail Web-Site
